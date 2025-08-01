@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritika Poojary - UI/UX Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+
+      color: #000;
+    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1); /* transparent white */
+  backdrop-filter: blur(10px); /* adds frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #CF6DFC;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #CF6DFC;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5rem 3rem;
+      background-image: linear-gradient(135deg, #FDFBD4, #C1BFFF, #CF6DFC);
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      color: #000;
+      font-family:Tahoma;
+    }
+    .highlight {
+      color: #CF6DFC;
+    }
+    .hero-text p {
+      margin: 1.5rem 0;
+      font-size: 1.1rem;
+      color: #000;
+      line-height: 1.6;
+    }
+    .hero-text button {
+      padding: 0.8rem 2rem;
+      border: none;
+      background: none;
+      border: 3px solid #CF6DFC;
+      color: #CF6DFC;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .hero-text button:hover {
+      border-color:#000;
+      color: #0b0b0b;
+    }
+    .hero img {
+      max-width: 350px;
+      width: 100%;
+      border-radius: 250px;
+      box-shadow: 0 0 20px rgba(29, 30, 31, 0.5);
+    }
+    section {
+      padding: 3rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color:#CF6DFC;
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+    }
+   #about {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.about-text p {
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: justify;
+  margin: 0;
+}
+
+    #education, #skills {
+  padding: 3rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+#education h2, #skills h2 {
+  text-align: center;
+  color: #CF6DFC;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edu-item h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.edu-item p {
+  margin: 0.2rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.skills-category {
+  margin-bottom: 1.2rem;
+  padding: 0.8rem 1rem;
+  background: #F8F6FF;
+  border-left: 3px solid #CF6DFC;
+  border-radius: 5px;
+}
+
+.skills-category h3 {
+  margin: 0 0 0.3rem;
+  color: #CF6DFC;
+  font-size: 1rem;
+}
+
+.skills-category p {
+  margin: 0;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+  .projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border:3px solid #CF6DFC; /* lavender border */
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+  flex: 1 1 calc(30% - 2rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  display: block;
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+.project-info h3 {
+  margin: 0.5rem 0;
+  color: #000; /* lavender title */
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #555;; /* lighter lavender for description */
+  line-height: 1.4;
+}
+
+.project-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-buttons a {
+  text-decoration: none;
+  background: #CF6DFC;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.project-buttons a:hover {
+  background: #C1BFFF;
+}
+#publications {
+  padding: 3rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.publication-card {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-left: 5px solid #CF6DFC;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+}
+
+.publication-card img {
+  width: 120px;
+  height: auto;
+  margin-right: 1.5rem;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.publication-content h3 {
+  margin: 0;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.publication-content p {
+  color: #555;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.pub-btn {
+  text-decoration: none;
+  background: #CF6DFC;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.pub-btn:hover {
+  background: #C1BFFF;
+}
+
+
+
+   footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #0b0b0b;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+footer a {
+  color: #CF6DFC;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #C1BFFF;
+}
+@media (max-width: 768px) {
+  .logo{
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.9rem;
+  }
+  nav ul li a{
+     font-size: 0.5rem;
+     font-weight: 100;
+  }
+  nav ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  .hero img {
+    margin-top: 2rem;
+    max-width: 250px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  #about, #education, #skills, #publications {
+    padding: 2rem 1rem;
+  }
+
+  .education-timeline {
+    flex-direction: column;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    max-width: 90%;
+  }
+
+  .publication-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .publication-card img {
+    margin: 0 0 1rem 0;
+    width: 100px;
+  }
+
+  .footer-content {
+    padding: 0 1rem;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Ritika Poojary</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1><span class="highlight">Hello</span> Everyone, I am <br>Ritika Poojary</h1>
+      <p>Let’s create something extraordinary together.</p>
+      <button onclick="window.location.href='#projects'">View My CV</button>
+    </div>
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHrHhTpmN1zeA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707032127743?e=1756339200&v=beta&t=71S4pIoeWJqpH-dtNOj4MrYhoVQ0kFDua8FgPV3mV-Q">
+  </section>
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about-text">
+      <p>A front‑end developer with an endless curiosity for learning new things and pushing creative boundaries. I’m passionate about building clean, responsive, and interactive web experiences that seamlessly merge functionality with beautiful design.
+
+As a self‑driven and slightly workaholic creator, I thrive on challenges and constantly look for opportunities to grow my skills. I enjoy exploring the latest web technologies, design trends, and performance optimizations, always aiming to deliver intuitive and engaging user experiences.
+
+When I’m not coding, I’m usually experimenting with new ideas, sketching concepts, or diving into UI/UX research to keep my creativity flowing. My ultimate goal is to craft digital solutions that make a real impact and leave users with a memorable experience.</p>
+      
+    </div>
+  </section>
+    <section id="education">
+  <h2>Education</h2>
+  <div class="education-timeline">
+    <div class="edu-card">
+      <h3>B.E. in Computer Science & Engineering</h3>
+      <p>SIES Graduate School of Technology, Mumbai (2021 – 2025)</p>
+      <p>CGPA: 8.50 / 10</p>
+      <span class="edu-highlight">Specialization: Internet of Things & Cyber Security Including Block Chain Technology </span>
+    </div>
+    <div class="edu-card">
+      <h3>Higher Secondary Education (HSC)</h3>
+      <p>JVM New English School & Jr. College, Thane (2019 – 2021)</p>
+      <p> 12th | MSBSHSE | Percentage: 86.67 / 100</p>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <h2>Skills</h2>
+  
+  <div class="skills-category">
+    <h3>Programming & Web Technologies</h3>
+    <div class="skills-list">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>Databases</h3>
+    <div class="skills-list">
+      <div class="skill">SQL (Basic)</div>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>Version Control</h3>
+    <div class="skills-list">
+      <div class="skill">Git</div>
+      <div class="skill">GitHub</div>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>AI Tools</h3>
+    <div class="skills-list">
+      <div class="skill">ChatGPT</div>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>Development Tools</h3>
+    <div class="skills-list">
+      <div class="skill">Visual Studio</div>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>UI/UX & Content Creation</h3>
+    <div class="skills-list">
+      <div class="skill">Canva</div>
+      <div class="skill">Figma (Basics)</div>
+    </div>
+  </div>
+</section>
+
+  <section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="gym.png" alt="Gym Website">
+      <div class="project-info">
+        <h3>Gym Website</h3>
+        <p>Responsive gym landing page showcasing gym facilities and membership plans.</p>
+        <div class="project-buttons">
+          <a href="https://webritgithub.github.io/gym" target="_blank">Live Demo</a>
+          <a href="https://github.com/webritgithub/gym" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="movie.png" alt="Movie Landing Page">
+      <div class="project-info">
+        <h3>Movie Landing Page</h3>
+        <p>Developed a simple UI for a movie website using HTML, CSS, and JavaScript. Utilized JSON files and a movie API for dynamic content and implemented a search option for movies by keyword.</p>
+        <div class="project-buttons">
+          <a href="https://webritgithub.github.io/Movie_Website/" target="_blank">Live Demo</a>
+          <a href="https://github.com/webritgithub/Movie_Website" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="horror.png" alt="Text-based Horror Adventure Game">
+      <div class="project-info">
+        <h3>Text-based Horror Adventure Game</h3>
+        <p>Interactive text-based horror game with immersive storytelling and multiple branching paths.</p>
+        <div class="project-buttons">
+          <a href="https://webritgithub.github.io/text_adventure_using_javascript" target="_blank">Live Demo</a>
+          <a href="https://github.com/webritgithub/text_adventure_using_javascript" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="medicine.png" alt="Fake Medicine Detection using Blockchain">
+      <div class="project-info">
+        <h3>Fake Medicine Detection using Blockchain</h3>
+        <p>Blockchain-based platform ensuring transparency in the drug supply chain by verifying and tracking medicines, protecting consumers and ensuring trust in healthcare.</p>
+        <div class="project-buttons">
+          <a href="https://webritgithub.github.io/Fake-medicine-detection-using-Blockchain" target="_blank">Live Demo</a>
+          <a href="https://github.com/webritgithub/Fake-medicine-detection-using-Blockchain" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="docchat.png" alt="Machine Learning Doc-Chat">
+      <div class="project-info">
+        <h3>Machine Learning Doc-Chat</h3>
+        <p>ML-based health chatbot predicting diseases based on user-selected symptoms using SVM, Random Forest, and Naive Bayes. Provides basic medication, workout, and diet suggestions.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="hospital.png">
+  <div class="project-info">
+    <h3>Hospital Appointment Manager (Receptionist UI)</h3>
+    <p>ASP.NET MVC app where receptionists can book, view, and delete patient appointments.<br>Technology: ASP.NET MVC, C#, Razor views.</p>
+  </div>
+</div>
+
+
+  </div>
+</section>
+<section id="publications">
+  <h2>Research & Publications</h2>
+  
+  <div class="publication-card">
+    <img src="research.png">
+    <div class="publication-content">
+      <h3>Paper Tite: SAFEConnect: A Dual-Function Emergency Alert System Using Arduino Nano, GPS, and GSM Modules</h3>
+      <p> Published at IJSDR – International Journal of Scientific Development and Research, Volume 10</p>
+      <a href="https://ijsdr.org/viewpaperforall.php?paper=IJSDR2504360" target="_blank" class="pub-btn">Read Paper</a>
+    </div>
+  </div>
+
+  <div class="publication-card">
+    <img src="book.jpg">
+    <div class="publication-content">
+      <h3>The Half Perspective: Rules of Human Nature We Often Miss</h3>
+      <p>A heartfelt reflection on life, emotions, and human nature—blending real-life-inspired stories, emotional truths, and soul-touching shayari. Kindle Edition available on Amazon.</p>
+      <a href="https://www.amazon.in/Half-Perspective-RULES-HUMAN-NATURE-ebook/dp/B0FHG3PX72/" target="_blank" class="pub-btn">View on Amazon</a>
+    </div>
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+  <footer id="contact">
+  <div class="footer-content">
+    <p>© 2025 Ritika Poojary | Front-End Developer</p>
+    <p>
+      Phone: +91 9136703366 <br>
+      Location: Navi Mumbai, India
+    </p>
+    <p>
+      <a href="mailto:ritikapoojary003@gmail.com">ritikapoojary003@gmail.com</a> |
+      <a href="https://github.com/webritgithub" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/ritika-poojary" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
