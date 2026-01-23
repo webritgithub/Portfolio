@@ -336,16 +336,53 @@ footer a:hover {
     padding: 5px;
   }
   header {
+    padding: 0.7rem 1rem; /* smaller header height */
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  /* Hide normal nav */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    border-radius: 0 0 10px 10px;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  /* When menu is open */
+  nav ul.show {
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 0.9rem;
   }
    .menu-toggle {
     display: block;
     font-size: 1.8rem;
     cursor: pointer;
   }
-  nav ul li a{
+  /* nav ul li a{
      font-size: 0.5rem;
      font-weight: 100;
   }
@@ -355,7 +392,7 @@ footer a:hover {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+  } */
 
   .hero {
     flex-direction: column;
@@ -408,9 +445,9 @@ footer a:hover {
     padding: 0 1rem;
   }
 
-  nav ul li a {
+  /* nav ul li a {
     font-size: 1rem;
-  }
+  } */
 }
 
 
@@ -638,6 +675,7 @@ When I’m not coding, I’m usually experimenting with new ideas, sketching con
 
 </body>
 </html>
+
 
 
 
