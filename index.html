@@ -350,28 +350,42 @@ footer a:hover {
     cursor: pointer;
   }
 
-  /* Hide normal nav */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 1rem 0;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
-    border-radius: 0 0 10px 10px;
-  }
+ nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
 
-  nav ul li {
-    text-align: center;
-    padding: 0.8rem 0;
-  }
+nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
 
-  nav ul li a {
-    font-size: 1rem;
-  }
+/* Animated underline */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #CF6DFC;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #CF6DFC;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
 
   /* When menu is open */
   nav ul.show {
@@ -675,6 +689,7 @@ When I’m not coding, I’m usually experimenting with new ideas, sketching con
 
 </body>
 </html>
+
 
 
 
