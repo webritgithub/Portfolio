@@ -349,8 +349,8 @@ footer a:hover {
   nav ul {
   display: none;
   flex-direction: column;
-  width: 75%;              /* smaller width */
-  max-width: 260px;        /* prevents it from getting too wide */
+  width: 55%;              /* smaller width */
+  max-width: 120px;        /* prevents it from getting too wide */
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -712,15 +712,26 @@ When I’m not coding, I’m usually experimenting with new ideas, sketching con
 <script>
   const toggleBtn = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
+  const menuItems = navLinks.querySelectorAll("a");
 
+  // Toggle menu open/close
   toggleBtn.addEventListener("click", () => {
     navLinks.classList.toggle("show");
+  });
+
+  // Close menu when any link is clicked
+  menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+    });
   });
 </script>
 
 
+
 </body>
 </html>
+
 
 
 
