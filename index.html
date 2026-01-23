@@ -325,20 +325,10 @@ footer a {
 footer a:hover {
   color: #C1BFFF;
 }
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 1.6rem;
-  }
 
-  .hero-text p {
-    font-size: 0.95rem;
-  }
-
-  .hero-text button {
-    width: 100%;
-  }
+.menu-toggle {
+  display: none;
 }
-
 @media (max-width: 768px) {
   .logo{
     font-size: 0.8rem;
@@ -349,6 +339,11 @@ footer a:hover {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0.9rem;
+  }
+   .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
   }
   nav ul li a{
      font-size: 0.5rem;
@@ -424,8 +419,9 @@ footer a:hover {
 <body>
   <header>
     <div class="logo">Ritika Poojary</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
     <nav>
-      <ul>
+      <ul id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -631,9 +627,18 @@ When I’m not coding, I’m usually experimenting with new ideas, sketching con
     </p>
   </div>
 </footer>
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
