@@ -355,9 +355,9 @@ footer a:hover {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   position: absolute;
-  top: 70px;
+  top: 60px;
   right: 15px;             /* align to right instead of full width */
-  padding: 0.8rem 0.6rem;  /* slightly tighter padding */
+  padding: 0.4rem 0;  /* slightly tighter padding */
   border-radius: 14px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -366,13 +366,13 @@ footer a:hover {
 
 nav ul li {
   text-align: center;
-  padding: 0.7rem 0;
+  padding: 0.35rem 0; 
   border-radius: 8px;
   transition: background 0.25s ease, transform 0.2s ease;
 }
 
 nav ul li a {
-  font-size: 0.95rem;   /* slightly smaller text */
+  font-size: 0.88rem;  /* slightly smaller text */
 }
 
  
@@ -395,14 +395,8 @@ nav ul.show {
 
 /* Smooth dropdown animation */
 @keyframes menuFade {
-  from {
-    opacity: 0;
-    transform: translateY(-10px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
    .menu-toggle {
@@ -731,6 +725,7 @@ When I’m not coding, I’m usually experimenting with new ideas, sketching con
 
 </body>
 </html>
+
 
 
 
