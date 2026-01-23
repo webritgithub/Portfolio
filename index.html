@@ -345,19 +345,20 @@ footer a:hover {
   /* Show hamburger */
 
  /* Hide normal nav */
- nav ul {
+
+  nav ul {
   display: none;
   flex-direction: column;
-  width: 90%;
-  max-width: 320px;
+  width: 75%;              /* smaller width */
+  max-width: 260px;        /* prevents it from getting too wide */
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   position: absolute;
   top: 70px;
-  right: 15px;
-  padding: 1rem 0.5rem;
-  border-radius: 16px;
+  right: 15px;             /* align to right instead of full width */
+  padding: 0.8rem 0.6rem;  /* slightly tighter padding */
+  border-radius: 14px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.4);
   animation: menuFade 0.3s ease;
@@ -365,23 +366,23 @@ footer a:hover {
 
 nav ul li {
   text-align: center;
-  padding: 0.9rem 0;
-  border-radius: 10px;
+  padding: 0.7rem 0;
+  border-radius: 8px;
   transition: background 0.25s ease, transform 0.2s ease;
 }
+
+nav ul li a {
+  font-size: 0.95rem;   /* slightly smaller text */
+}
+
+ 
 
 nav ul li:hover {
   background: rgba(207, 109, 252, 0.1);
   transform: translateX(4px);
 }
 
-nav ul li a {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
-}
+
 
 nav ul li a:hover {
   color: #CF6DFC;
@@ -720,6 +721,7 @@ When I’m not coding, I’m usually experimenting with new ideas, sketching con
 
 </body>
 </html>
+
 
 
 
