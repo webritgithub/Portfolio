@@ -345,32 +345,65 @@ footer a:hover {
   /* Show hamburger */
 
  /* Hide normal nav */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 1rem 0;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
-    border-radius: 0 0 10px 10px;
-  }
+ nav ul {
+  display: none;
+  flex-direction: column;
+  width: 90%;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: absolute;
+  top: 70px;
+  right: 15px;
+  padding: 1rem 0.5rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  animation: menuFade 0.3s ease;
+}
 
-  nav ul li {
-    text-align: center;
-    padding: 0.8rem 0;
-  }
+nav ul li {
+  text-align: center;
+  padding: 0.9rem 0;
+  border-radius: 10px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
 
-  nav ul li a {
-    font-size: 1rem;
-  }
+nav ul li:hover {
+  background: rgba(207, 109, 252, 0.1);
+  transform: translateX(4px);
+}
 
-  /* When menu is open */
-  nav ul.show {
-    display: flex;
+nav ul li a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #CF6DFC;
+}
+
+/* When menu is open */
+nav ul.show {
+  display: flex;
+}
+
+/* Smooth dropdown animation */
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
    .menu-toggle {
     display: block;
     font-size: 1.8rem;
@@ -687,6 +720,7 @@ When I’m not coding, I’m usually experimenting with new ideas, sketching con
 
 </body>
 </html>
+
 
 
 
