@@ -719,12 +719,20 @@ When I’m not coding, I’m usually experimenting with new ideas, sketching con
       navLinks.classList.remove("show");
     });
   });
+
+   // Close menu if click happens outside menu
+  document.addEventListener("click", (e) => {
+    if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+      navLinks.classList.remove("show");
+    }
+  });
 </script>
 
 
 
 </body>
 </html>
+
 
 
 
