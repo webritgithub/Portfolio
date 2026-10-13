@@ -49,39 +49,210 @@ I’ve worked on building, testing, debugging, and deploying software and AI sol
 </section>
 
 
-  <section id="projects"><h2>My Projects</h2><div class="projects-grid">
-<article class="project-card"><div class="project-art food-art" aria-hidden="true"><span class="art-label">11 FOOD CATEGORIES / YOLOv11</span><div class="food-symbol">◎</div><strong>FOOD DETECTION</strong></div><div class="project-info"><h3>Food Detection</h3><p class="project-subtitle">Real-Time Indian Food Detection</p><p>A YOLOv11 Medium system that detects and localizes multiple food items across 11 Indian food categories. Built with Roboflow annotations and Albumentations, using an augmented dataset of 1,731 images.</p><p>Class-specific confidence thresholds refine predictions. An OpenCV annotation tool captures user corrections for a feedback dataset and periodic retraining.</p><p class="project-results">mAP@50: <strong>75.5% validation</strong> · <strong>60.7% test</strong></p><div class="tech-tags"><span>Python</span><span>YOLOv11</span><span>Ultralytics</span><span>Roboflow</span><span>Albumentations</span><span>OpenCV</span><span>Google Colab</span></div></div></article>
-<article class="project-card"><div class="project-art medm-art" aria-hidden="true"><span class="art-label">REAL-TIME MONITORING</span><svg viewBox="0 0 320 90"><path d="M0 48H75L93 30 110 68 138 10 160 80 184 40 203 48H320"/></svg><strong>MEDM</strong></div><div class="project-info"><h3>MEDM</h3><p class="project-subtitle">Medical Emergency &amp; Weapon Detection</p><p>A live webcam monitoring prototype combining X3D fall recognition with YOLO pose tracking. Sustained stillness after a fall advances a timer before the system escalates to an emergency status.</p><p>A custom YOLO detector adds weapon detection alongside person, crowd, vehicle, and motion analysis. A Flask dashboard displays live detection results, with CPU or CUDA inference support.</p><div class="tech-tags"><span>Python</span><span>PyTorch</span><span>X3D</span><span>YOLO</span><span>Pose Tracking</span><span>OpenCV</span><span>Flask</span></div></div></article>
-<article class="project-card"><div class="project-art city-art" aria-hidden="true"><span class="art-label">CIVIC ISSUE DETECTION</span><div class="city-buildings"><i></i><i></i><i></i><i></i><i></i></div><strong>CITY VOICE</strong></div><div class="project-info"><span class="project-kicker">MAY – JUNE 2026</span><h3>City Voice</h3><p class="project-subtitle">AI-Powered Civic Issue Detection</p><p>Classifies uploaded images into 12 categories covering civic issues, normal conditions, and irrelevant images. Uses an ImageNet-pretrained ResNet18 backbone with CBAM channel and spatial attention.</p><p>Multi-zoom crops, majority voting, confidence-based tie resolution, and a targeted rescue rule handle difficult scenes. Exported to ONNX for inference through ONNX Runtime and a Flask web application.</p><div class="tech-tags"><span>Python</span><span>PyTorch</span><span>ResNet18</span><span>CBAM</span><span>ONNX Runtime</span><span>Flask</span></div></div></article>
-<div class="project-card">
+ 
+<section id="projects">
+  <h2>My Projects</h2>
+
+  <div class="projects-grid">
+
+    <!-- Food Detection -->
+    <article class="project-card">
+      <img src="food.png" alt="Indian Food Detection using YOLOv11">
+
+      <div class="project-info">
+        <h3>Food Detection</h3>
+        <p class="project-subtitle">Real-Time Indian Food Detection</p>
+
+        <p>
+          A YOLOv11 Medium system that detects and localizes multiple
+          food items across 11 Indian food categories. Built with
+          Roboflow annotations and Albumentations, using an augmented
+          dataset of 1,731 images.
+        </p>
+
+        <p>
+          Class-specific confidence thresholds refine predictions.
+          An OpenCV annotation tool captures user corrections for a
+          feedback dataset and periodic retraining.
+        </p>
+
+        <p class="project-results">
+          mAP@50: <strong>75.5% validation</strong> ·
+          <strong>60.7% test</strong>
+        </p>
+
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>YOLOv11</span>
+          <span>Ultralytics</span>
+          <span>Roboflow</span>
+          <span>Albumentations</span>
+          <span>OpenCV</span>
+          <span>Google Colab</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="YOUR_FOOD_DETECTION_GITHUB_URL"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- MEDM -->
+    <article class="project-card">
+      <img src="MEDM.png" alt="MEDM emergency monitoring dashboard">
+
+      <div class="project-info">
+        <h3>MEDM</h3>
+        <p class="project-subtitle">
+          Medical Emergency &amp; Weapon Detection
+        </p>
+
+        <p>
+          A real-time monitoring prototype combining X3D fall
+          recognition with YOLO pose tracking. Sustained stillness
+          after a fall advances a timer before the system escalates
+          to an emergency status.
+        </p>
+
+        <p>
+          A custom YOLO detector adds weapon detection alongside
+          person, crowd, vehicle, and motion analysis. A Flask
+          dashboard displays live detection results, with CPU or
+          CUDA inference support.
+        </p>
+
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>PyTorch</span>
+          <span>X3D</span>
+          <span>YOLO</span>
+          <span>Pose Tracking</span>
+          <span>OpenCV</span>
+          <span>Flask</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://github.com/webritgithub/MEDM"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- City Voice -->
+    <article class="project-card">
+      <img src="city_voice.png" alt="City Voice civic issue detection application">
+
+      <div class="project-info">
+        <span class="project-kicker">MAY – JUNE 2026</span>
+        <h3>City Voice</h3>
+        <p class="project-subtitle">
+          AI-Powered Civic Issue Detection
+        </p>
+
+        <p>
+          Classifies uploaded images into 12 categories covering
+          civic issues, normal conditions, and irrelevant images.
+          Uses an ImageNet-pretrained ResNet18 backbone with CBAM
+          channel and spatial attention.
+        </p>
+
+        <p>
+          Multi-zoom crops, majority voting, confidence-based tie
+          resolution, and a targeted rescue rule handle difficult
+          scenes. Exported to ONNX for inference through ONNX
+          Runtime and a Flask web application.
+        </p>
+
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>PyTorch</span>
+          <span>ResNet18</span>
+          <span>CBAM</span>
+          <span>ONNX Runtime</span>
+          <span>Flask</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="YOUR_CITY_VOICE_GITHUB_URL"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Text-based Horror Adventure Game -->
+    <article class="project-card">
       <img src="horror.png" alt="Text-based Horror Adventure Game">
+
       <div class="project-info">
         <h3>Text-based Horror Adventure Game</h3>
-        <p>Interactive text-based horror game with immersive storytelling and multiple branching paths.</p>
+        <p>
+          Interactive text-based horror game with immersive
+          storytelling and multiple branching paths.
+        </p>
+
         <div class="project-buttons">
-          <a href="https://webritgithub.github.io/text_adventure_using_javascript" target="_blank" rel="noopener noreferrer">Live Demo</a>
-          <a href="https://github.com/webritgithub/text_adventure_using_javascript" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://webritgithub.github.io/text_adventure_using_javascript"
+             target="_blank" rel="noopener noreferrer">
+            Live Demo
+          </a>
+          <a href="https://github.com/webritgithub/text_adventure_using_javascript"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
         </div>
       </div>
-    </div>
-<div class="project-card">
+    </article>
+
+    <!-- Fake Medicine Detection -->
+    <article class="project-card">
       <img src="medicine.png" alt="Fake Medicine Detection using Blockchain">
+
       <div class="project-info">
         <h3>Fake Medicine Detection using Blockchain</h3>
-        <p>Blockchain-based platform ensuring transparency in the drug supply chain by verifying and tracking medicines, protecting consumers and ensuring trust in healthcare.</p>
+        <p>
+          Blockchain-based platform ensuring transparency in the
+          drug supply chain by verifying and tracking medicines,
+          protecting consumers and supporting trust in healthcare.
+        </p>
+
         <div class="project-buttons">
-          <a href="https://webritgithub.github.io/Fake-medicine-detection-using-Blockchain" target="_blank" rel="noopener noreferrer">Live Demo</a>
-          <a href="https://github.com/webritgithub/Fake-medicine-detection-using-Blockchain" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://webritgithub.github.io/Fake-medicine-detection-using-Blockchain"
+             target="_blank" rel="noopener noreferrer">
+            Live Demo
+          </a>
+          <a href="https://github.com/webritgithub/Fake-medicine-detection-using-Blockchain"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
         </div>
       </div>
-    </div>
-<div class="project-card">
+    </article>
+
+    <!-- Machine Learning Doc-Chat -->
+    <article class="project-card">
       <img src="docchat.png" alt="Machine Learning Doc-Chat">
+
       <div class="project-info">
         <h3>Machine Learning Doc-Chat</h3>
-        <p>ML-based health chatbot predicting diseases based on user-selected symptoms using SVM, Random Forest, and Naive Bayes. Provides basic medication, workout, and diet suggestions.</p>
+        <p>
+          ML-based health chatbot predicting diseases based on
+          user-selected symptoms using SVM, Random Forest, and
+          Naive Bayes. Provides basic medication, workout, and
+          diet suggestions.
+        </p>
       </div>
-    </div></div></section>
+    </article>
+
+  </div>
+</section>
+
 <section id="certifications"><h2>Certifications</h2><div class="education-timeline"><article class="edu-card"><h3>Web Development</h3><p>CodSoft · 20 February 2024</p></article><article class="edu-card"><h3>Python Fundamentals for Beginners</h3><p>Codchef · 13 June 2024</p></article></div></section>
 <section id="publications">
   <h2>Research & Publications</h2>
